@@ -1,0 +1,139 @@
+user root('lunitoner'), lfernando('lunitoner'), icarlos('c9873'), abonilla('alboni09')
+database secundaria
+
+usuario			password		privilegio
+lfernando		lunitoner		1
+
+
+tabla usuarios
+
+privilegios ---> '1'= administrador,	'2' = control escolar,	'3' = maestros
+estado --------> '0'= inactivo		'1' = activo
+
+
+administrador
+.-agregar usuarios
+.-dar de baja a usuarios
+.-eliminar usuarios
+.-modificar permisos
+
+
+control escolar
+.-agregar alumnos
+.-modificar alumnos
+.-eliminar alumnos
+.-imprimir listas
+.-asignar materias
+.-asignar grupos
+.-agregar grupos
+.-agregar materias
+.-agregar profesores
+.-modificar profesores
+
+table alumnos select, insert, update, delete
+table grupos select, inset, update, delete 
+table materias select, insert, update, delete
+table profesores select, insert, update, delete
+tale grupo_materias select, insert, udate, delete
+
+docentes
+.-agregar calificaciones
+.-generar reportes
+.-modificar calificaciones
+
+table alumnos select
+table grupos select
+table materias select
+table profesores select
+tale grupo_materias select
+table calificacionesP select, insert, update, delete
+
+usuarios
++-------------+------------------+------+-----+---------+----------------+
+| Field       | Type             | Null | Key | Default | Extra          |
++-------------+------------------+------+-----+---------+----------------+
+| id_usuarios | int(11)          | NO   | PRI | NULL    | auto_increment |
+| usuario     | varchar(20)      | YES  |     | NULL    |                |
+| nombres     | varchar(20)      | YES  |     | NULL    |                |
+| apellidos   | varchar(20)      | YES  |     | NULL    |                |
+| estado      | set('0','1')     | YES  |     | NULL    |                |
+| privilegios | set('0','1','2') | YES  |     | NULL    |                |
++-------------+------------------+------+-----+---------+----------------+
+
+grupos
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| id_grupo | int(11)      | NO   | PRI | NULL    | auto_increment |
+| grado    | tinyint(4)   | YES  |     | NULL    |                |
+| grupo    | varchar(1)   | YES  |     | NULL    |                |
+| turno    | set('v','m') | YES  |     | NULL    |                |
+| periodo  | varchar(19)  | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+
+grupos_materias
+
++------------+---------+------+-----+---------+-------+
+| Field      | Type    | Null | Key | Default | Extra |
++------------+---------+------+-----+---------+-------+
+| id_grupo   | int(11) | YES  |     | NULL    |       |
+| id_materia | int(11) | YES  |     | NULL    |       |
++------------+---------+------+-----+---------+-------+
+
+alumnos
++----------------+-------------+------+-----+---------+----------------+
+| Field          | Type        | Null | Key | Default | Extra          |
++----------------+-------------+------+-----+---------+----------------+
+| id_alumno      | int(11)     | NO   | PRI | NULL    | auto_increment |
+| nombres_alumno | varchar(20) | YES  |     | NULL    |                |
+| apellidoP      | varchar(10) | YES  |     | NULL    |                |
+| apellidoM      | varchar(10) | YES  |     | NULL    |                |
+| id_grupo       | int(11)     | YES  |     | NULL    |                |
++----------------+-------------+------+-----+---------+----------------+
+
+profesores 
+
++--------------------+-------------+------+-----+---------+----------------+
+| Field              | Type        | Null | Key | Default | Extra          |
++--------------------+-------------+------+-----+---------+----------------+
+| id_profesor        | int(11)     | NO   | PRI | NULL    | auto_increment |
+| nombres_profesor   | varchar(20) | YES  |     | NULL    |                |
+| apellidos_profesor | varchar(20) | YES  |     | NULL    |                |
++--------------------+-------------+------+-----+---------+----------------+
+
+calificacionesP
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| id_alumno  | int(11)      | YES  |     | NULL    |       |
+| id_materia | int(11)      | YES  |     | NULL    |       |
+| me         | decimal(4,2) | YES  |     | 0.50    |       |
+| td         | decimal(4,2) | YES  |     | 0.50    |       |
+| hp         | decimal(4,2) | YES  |     | 0.50    |       |
+| e1         | tinyint(4)   | YES  |     | NULL    |       |
+| e2         | tinyint(4)   | YES  |     | NULL    |       |
+| e3         | tinyint(4)   | YES  |     | NULL    |       |
+| e4         | tinyint(4)   | YES  |     | NULL    |       |
+| e5         | tinyint(4)   | YES  |     | NULL    |       |
+| e6         | tinyint(4)   | YES  |     | NULL    |       |
+| e7         | tinyint(4)   | YES  |     | NULL    |       |
+| e8         | tinyint(4)   | YES  |     | NULL    |       |
+| e9         | tinyint(4)   | YES  |     | NULL    |       |
+| e10        | tinyint(4)   | YES  |     | NULL    |       |
+| eb         | decimal(4,2) | YES  |     | NULL    |       |
+| ex         | decimal(4,2) | YES  |     | NULL    |       |
+| ep         | decimal(4,2) | YES  |     | NULL    |       |
+| val        | decimal(4,2) | YES  |     | NULL    |       |
+| cb         | decimal(4,2) | YES  |     | NULL    |       |
+| f          | tinyint(4)   | YES  |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+
+
+materias
++----------------+-------------+------+-----+---------+----------------+
+| Field          | Type        | Null | Key | Default | Extra          |
++----------------+-------------+------+-----+---------+----------------+
+| id_materia     | int(11)     | NO   | PRI | NULL    | auto_increment |
+| nombre_materia | varchar(20) | YES  |     | NULL    |                |
+| id_profesor    | int(11)     | YES  |     | NULL    |                |
++----------------+-------------+------+-----+---------+----------------+
