@@ -19,7 +19,7 @@
 <html lang="es">
 <head>
 	<title>ESCT16</title>
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	
 	<!--<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.min.css">-->
 	<link rel="stylesheet" type="text/css" href="../librerias/bootstrap/css/bootstrap.min.css">
 	<link href="../bootstrap/bootstrap-theme.css" rel="stylesheet"/>
@@ -53,20 +53,7 @@
 	<link rel="stylesheet" href="../librerias/font-awesome/css/font-awesome.min.css">
 
 
-	<style type="text/css">
-		  .contenedor{
 
-            background-color: #fafafa;
-            width: 30%;
-            transition:2s;
-            margin-top: 60px;
-            box-shadow: 0px 0px 40px white, 0px 0px 80px white;
-            padding-bottom: 50px;
-
-
-        }
-
-	</style>
 </head>
 <body>
 
@@ -104,7 +91,7 @@
         
         <!-- Modal body -->
         <div class="modal-body">
-        	<form>
+        	<!--<form>-->
         	<div class="form-group">
       	<label>Nombres: </label>
       	<input class="form-control input-sm" type="text" placeholder="Ingresar Nombres" id="name" name="name" required>
@@ -146,14 +133,14 @@
         </div>
         <!-- Modal footer -->
         <div class="modal-footer">
-          <!--<button type="submit" class="btn btn-primary" id="agregarUser" name="agregarUser" data-dismiss="modal">Agregar</button>-->
-          <input type="submit" class="btn btn-primary" id="agregarUser" name="agregarUser" >
+          <button type="submit" class="btn btn-primary" id="agregarUser" name="agregarUser" data-dismiss="modal">Agregar</button>
+          <!--<input type="submit" class="btn btn-primary" id="agregarUser" name="agregarUser" >-->
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
         
       </div>
     </div>
-    </form>
+   <!-- </form>-->
   </div>
   
 
@@ -173,28 +160,28 @@
         	<input type="text" hidden="" id="idpersona" name="">
         	<div class="form-group">
       	<label>Nombres: </label>
-      	<input class="form-control input-sm" type="text" placeholder="Ingresar Nombres" name="nameu">
+      	<input class="form-control input-sm" id="nameu"  type="text" placeholder="Ingresar Nombres" name="nameu">
       </div>
       	<div class="form-group">
       	<label>Apellidos: </label>
-      	<input class="form-control input-sm" type="text" placeholder="Ingresar Apellidos" name="lastnameu">
+      	<input class="form-control input-sm" id="lastnameu" type="text" placeholder="Ingresar Apellidos" name="lastnameu">
       </div>
       	<div class="form-group">
       	<label>Usuario: </label>
-      	<input class="form-control input-sm" type="text" placeholder="Ingresar Usuario" name="useru">
+      	<input class="form-control input-sm" id="useru" type="text" placeholder="Ingresar Usuario" name="useru">
       </div>
       	<div class="form-group">
       	<label>Contraseña: </label>
-      	<input class="form-control input-sm" type="password" placeholder="Ingresar Contraseña" name="passu">
+      	<input class="form-control input-sm" id="passu" type="password" placeholder="Ingresar Contraseña" name="passu">
       </div>
       	<div class="form-group">
       	<label>Repetir Contraseña: </label>
-      	<input class="form-control input-sm" type="password" placeholder="Repetir Contraseña" name="passru">
+      	<input class="form-control input-sm"  id="passru" type="password" placeholder="Repetir Contraseña" name="passru">
       </div>
 		<div class="form-group">
 		      <label >Tipo de Usuario</label>
 		      
-			      <select class="form-control input-sm" class="form-control"  name="privilegesu">
+			      <select class="form-control input-sm" id="privilegesu" class="form-control"  name="privilegesu">
 			        <option value="3" selected>Docente</option>
 					<option value="2">Control Escolar</option>
 					<option value="1">Administrador</option> 
@@ -248,6 +235,8 @@
 <script type="text/javascript"> 
 	$(document).ready(function(){
 		$('#agregarUser').click(function(){
+
+		
 			nombres=$('#name').val();
 			apellidos=$('#lastname').val();
 			usuario=$('#user').val();

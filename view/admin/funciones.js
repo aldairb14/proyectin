@@ -21,6 +21,21 @@ function agregardatos(nombres, apellidos,usuario,password,estado, privilegios){
 	.fail(function(){
 		alertify.error("wew"+	r);
 	});
+}
 
+function agregaform(datos){
+	d=datos.split('||');
 
+	$('#idpersona').val(d[0]);
+	$('#nameu').val(d[1]);
+	$('#lastnameu').val(d[2]);
+	$('#useru').val(d[3]);
+	$('#privilegesu').val(d[4]);
+	
+	
+	
+	//passu
+	//passru
+	
+//https://www.youtube.com/watch?v=52niJ-2TrQ0
 }

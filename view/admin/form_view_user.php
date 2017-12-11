@@ -42,7 +42,7 @@ if($privilegesAccess != 1){
       while ($ver=mysqli_fetch_row($resultado)) {
         # code...
       
-
+            $datos= $ver[0]."||".$ver[1]."||".$ver[2]."||".$ver[3]."||".$ver[4]."||".$ver[5];
          ?>
 
         <tr>
@@ -54,7 +54,7 @@ if($privilegesAccess != 1){
         <td> <?php echo $ver[5]; ?> </td>
         
         <td>
-          <a class="btn btn-success" data-toggle="modal" data-target="#modalEdicion">
+          <a class="btn btn-success" data-toggle="modal" data-target="#modalEdicion" onclick="agregaform('<?php echo  $datos ?>')">
   <i class="fa fa-pencil-square "></i> Editar</a>
         
         </td>
