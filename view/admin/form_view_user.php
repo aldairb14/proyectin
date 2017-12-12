@@ -59,7 +59,7 @@ if($privilegesAccess != 1){
         
         </td>
         <td>
-         <a class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+         <a class="btn btn-danger" onclick="preguntarsino('<?php echo $ver[0] ?> ')">
   <i class="fa fa-trash-o"></i> Delete</a>
         </td>
         </tr>

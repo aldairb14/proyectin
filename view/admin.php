@@ -159,6 +159,10 @@
         <div class="modal-body">
         	<input type="text" hidden="" id="idpersona" name="">
         	<div class="form-group">
+      	<label>Usuario: </label>
+      	<input class="form-control input-sm" id="useru" type="text" placeholder="Ingresar Usuario" name="useru">
+      </div>
+        	<div class="form-group">
       	<label>Nombres: </label>
       	<input class="form-control input-sm" id="nameu"  type="text" placeholder="Ingresar Nombres" name="nameu">
       </div>
@@ -166,10 +170,7 @@
       	<label>Apellidos: </label>
       	<input class="form-control input-sm" id="lastnameu" type="text" placeholder="Ingresar Apellidos" name="lastnameu">
       </div>
-      	<div class="form-group">
-      	<label>Usuario: </label>
-      	<input class="form-control input-sm" id="useru" type="text" placeholder="Ingresar Usuario" name="useru">
-      </div>
+      	
       	<div class="form-group">
       	<label>Contraseña: </label>
       	<input class="form-control input-sm" id="passu" type="password" placeholder="Ingresar Contraseña" name="passu">
@@ -178,11 +179,20 @@
       	<label>Repetir Contraseña: </label>
       	<input class="form-control input-sm"  id="passru" type="password" placeholder="Repetir Contraseña" name="passru">
       </div>
+        	<div class="form-group">
+		      <label >Estado</label>
+		      
+			      <select class="form-control input-sm" class="form-control" id="estadou" name="estado">
+			        <option value="1">Activo</option>
+					<option value="0">Inactivo</option>
+					
+			      </select>
+		 </div>
 		<div class="form-group">
 		      <label >Tipo de Usuario</label>
 		      
 			      <select class="form-control input-sm" id="privilegesu" class="form-control"  name="privilegesu">
-			        <option value="3" selected>Docente</option>
+			        <option value="3" >Docente</option>
 					<option value="2">Control Escolar</option>
 					<option value="1">Administrador</option> 
 			      </select>
@@ -191,46 +201,13 @@
         </div>
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary"  name="editarUser" data-dismiss="modal">Editar</button>
+          <button type="button" class="btn btn-primary" id="editarUser" name="editarUser" data-dismiss="modal">Editar</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
         
       </div>
     </div>
   </div>
-
-
-
-<!-- Button to Open the Modal -->
-  
-
-  <!-- The Modal -->
-  <div class="modal fade" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-      
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        
-        <!-- Modal body -->
-        <div class="modal-body">
-          Modal body..
-        </div>
-        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  
-
-
 
 <script type="text/javascript"> 
 	$(document).ready(function(){
@@ -245,7 +222,26 @@
 			privileges=$('#privileges').val();
 				agregardatos(nombres,apellidos,usuario,password,estado,privileges);
 		});
+	
+
+	
+		$('#editarUser').click(function(){
+					idpersona=$('#idpersona').val();
+			nombres=$('#nameu').val();
+			apellidos=$('#lastnameu').val();
+			usuario=$('#useru').val();
+			password=$('#passu').val();
+			password1=$('#passru').val();
+			estado=$('#estadou').val();
+			privileges=$('#privilegesu').val();
+
+
+			//editardatos();
+				//document.write(idpersona+nombres+apellidos+usuario+estado+privileges);
+				editardatos(idpersona,nombres,apellidos,usuario,password,password1,estado,privileges);
+		});
 	});
+
 </script>
 
 
