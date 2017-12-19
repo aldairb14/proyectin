@@ -52,11 +52,11 @@ echo "<br>";
 
 <table table border=1 cellspacing=0 cellpadding=2 bordercolor="666633" WIDTH="1100">
 	<thead >
-		<th WIDTH="25%" > </th>
+		<th WIDTH="17%" > </th>
 		<th WIDTH="12%" class="text-center">valores</th>
-		<th WIDTH="30%" class="text-center">evaluacion productos</th>
+		<th WIDTH="40%" class="text-center">evaluacion productos</th>
 		<th WIDTH="4%"></th>
-		<th WIDTH="20%" class="text-center">promedios</th>
+		<th WIDTH="18%" class="text-center">promedios</th>
 		<th WIDTH="9%"></th>
 	</thead>
 	
@@ -64,25 +64,25 @@ echo "<br>";
 
 <table table border=1 cellspacing=0 cellpadding=2 bordercolor="666633" WIDTH="1100" id="datatables">
 		<thead>
-		<th WIDTH="25%">Nombre del Alumno </th>
+		<th WIDTH="17%">Nombre del Alumno </th>
 		<th WIDTH="4%">ME</th>
 		<th WIDTH="4%">TD</th>
 		<th WIDTH="4%">HP</th>
-		<th WIDTH="3%">1</th>
-		<th WIDTH="3%">2</th>
-		<th WIDTH="3%">3</th>
-		<th WIDTH="3%">4</th>
-		<th WIDTH="3%">5</th>
-		<th WIDTH="3%">6</th>
-		<th WIDTH="3%">7</th>
-		<th WIDTH="3%">8</th>
-		<th WIDTH="3%">9</th>
-		<th WIDTH="3%">10</th>
+		<th WIDTH="4%">1</th>
+		<th WIDTH="4%">2</th>
+		<th WIDTH="4%">3</th>
+		<th WIDTH="4%">4</th>
+		<th WIDTH="4%">5</th>
+		<th WIDTH="4%">6</th>
+		<th WIDTH="4%">7</th>
+		<th WIDTH="4%">8</th>
+		<th WIDTH="4%">9</th>
+		<th WIDTH="4%">10</th>
 		<th WIDTH="4%">EB</th>
-		<th WIDTH="4%">EX</th>
-		<th WIDTH="4%">EP</th>
-		<th WIDTH="4%">VAL</th>
-		<th WIDTH="4%">CB</th>
+		<th WIDTH="3.5%">EX</th>
+		<th WIDTH="3.5%">EP</th>
+		<th WIDTH="3.5%">VAL</th>
+		<th WIDTH="3.5%">CB</th>
 		<th WIDTH="4%">F</th>
 		<th WIDTH="9%"></th>
 	</thead>
@@ -104,25 +104,25 @@ $resultado=mysqli_query($conexion, $consulta);
       	  echo '<tr>
         <td>  '.$ver[0].' '.$ver[1].' '.$ver[2].'</td>';
     
-        echo '<td> <input type="text" value="'.$ver[3].'" style="width: 100%;" class="val"></td>';
-        echo '<td> <input type="text" value="'.$ver[4].'" style="width: 100%;" class="val"></td>';
-        echo '<td> <input type="text" value="'.$ver[5].'" style="width: 100%;" class="val"></td>';
-        echo '<td> <input type="text" value="'.$ver[6].'" style="width: 100%;" class="ep"></td>';
-        echo '<td> <input type="text" value="'.$ver[7].'" style="width: 100%;" class="ep"></td>';
-        echo '<td> <input type="text" value="'.$ver[8].'" style="width: 100%;" class="ep"></td>';
-        echo '<td> <input type="text" value="'.$ver[9].'" style="width: 100%;" class="ep"></td>';
-        echo '<td> <input type="text" value="'.$ver[10].'" style="width: 100%;" class="ep"></td>';
-        echo '<td> <input type="text" value="'.$ver[11].'" style="width: 100%;" class="ep"></td>';
-        echo '<td> <input type="text" value="'.$ver[12].'" style="width: 100%;" class="ep"></td>';
-        echo '<td> <input type="text" value="'.$ver[13].'" style="width: 100%;" class="ep"></td>';
-        echo '<td> <input type="text" value="'.$ver[14].'" style="width: 100%;" class="ep"></td>';
-        echo '<td> <input type="text" value="'.$ver[15].'" style="width: 100%;" class="ep"></td>';
+       echo '<td> <input type="number" min="0" max="0.5" step="0.1" value="'.$ver[3].'" style="width: 100%;" class="val"></td>';
+       echo '<td> <input type="number" min="0" max="0.5" step="0.1" value="'.$ver[4].'" style="width: 100%;" class="val"></td>';
+       echo '<td> <input type="number" min="0" max="0.5" step="0.1" value="'.$ver[5].'" style="width: 100%;" class="val"></td>';
+       echo '<td> <input type="number" min="0" max="10"  value="'.$ver[6].'" style="width: 100%;" class="ep"></td>';
+        echo '<td> <input type="number" min="0" max="10"  value="'.$ver[7].'" style="width: 100%;" class="ep"></td>';
+        echo '<td> <input type="number" min="0" max="10"  value="'.$ver[8].'" style="width: 100%;" class="ep"></td>';
+        echo '<td> <input type="number" min="0" max="10"  value="'.$ver[9].'" style="width: 100%;" class="ep"></td>';
+        echo '<td> <input type="number" min="0" max="10"  value="'.$ver[10].'" style="width: 100%;" class="ep"></td>';
+        echo '<td> <input type="number" min="0" max="10"  value="'.$ver[11].'" style="width: 100%;" class="ep"></td>';
+        echo '<td> <input type="number" min="0" max="10"  value="'.$ver[12].'" style="width: 100%;" class="ep"></td>';
+        echo '<td> <input type="number" min="0" max="10"  value="'.$ver[13].'" style="width: 100%;" class="ep"></td>';
+        echo '<td> <input type="number" min="0" max="10"  value="'.$ver[14].'" style="width: 100%;" class="ep"></td>';
+        echo '<td> <input type="number" min="0" max="10"  value="'.$ver[15].'" style="width: 100%;" class="ep"></td>';
         echo '<td> <input type="text" value="'.$ver[16].'" style="width: 100%;" class="eb"></td>';
         echo '<td> <input type="text" value="'.$ver[17].'" style="width: 100%;" readonly disabled class="eb ex prom"></td>';
         echo '<td> <input type="text" value="'.$ver[18].'" style="width: 100%;" readonly disabled class="ep prom"></td>';
         echo '<td> <input type="text" value="'.$ver[19].'" style="width: 100%;" readonly disabled class="val prom"></td>';
         echo '<td> <input type="text" value="'.$ver[20].'" style="width: 100%;" readonly disabled class="cb prom"></td>';
-        echo '<td> <input type="text" value="'.$ver[21].'" style="width: 100%;"></td>';
+        echo '<td> <input type="number" value="'.$ver[21].'" style="width: 100%;"></td>';
         echo '<td> <input type="button" value="Actualizar "class="btn btn-success" style="width: 100%;" ></td>';
         echo '<td hidden> <input type="text" value="'.$ver[22].'" style="width: 100%; hidden"></td>';
         echo "</tr>";
@@ -188,7 +188,7 @@ seleccionval.change(function(){
 	var pro1 = parseFloat($(pro[0]).val());
 	var pro2 = parseFloat($(pro[1]).val());
 	var pro3 = parseFloat($(pro[2]).val());
-	var sumprom= pro1+pro2+pro3;
+	var sumprom= (pro1+pro2+pro3).toFixed(1);
 	$(pro[3]).val(sumprom);
 
 });
@@ -199,14 +199,14 @@ seleccioneb.change(function(){
 	var re =$(this).closest("tr").find('input.eb');
 	var val1 = parseFloat($(re[0]) .val());
 	
-	var sumeb= val1*0.4;
+	var sumeb= (val1*0.4).toFixed(1);
 	$(re[1]).val(sumeb);
 
 	var pro =$(this).closest("tr").find('input.prom');
 	var pro1 = parseFloat($(pro[0]).val());
 	var pro2 = parseFloat($(pro[1]).val());
 	var pro3 = parseFloat($(pro[2]).val());
-	var sumprom= pro1+pro2+pro3;
+	var sumprom= (pro1+pro2+pro3).toFixed(1);
 	$(pro[3]).val(sumprom);
 	//console.log(pro);
 });
@@ -215,7 +215,38 @@ seleccioneb.change(function(){
 seleccionep=$("tr>td>input.ep");
 seleccionep.change(function(){
 	var prod  =$(this).closest("tr").find('input.ep');
-console.log(prod[0]);
+//console.log(prod);
+var tem=0, cont=0,  sumapro;
+
+	for ( var i=0 ; i < prod.length-1; i++) {
+
+		var ac = $(prod[i]).val();
+
+		if(ac==""){
+
+		}else{
+		 tem = tem+parseFloat(ac);
+		 cont=cont+1;
+		}		
+	}
+	
+	if (Number.isNaN(tem / cont)) {
+		//console.log("s")
+		sumapro=0;
+		$(prod[10]).val(sumapro);
+	}else{
+
+		sumapro= ((tem/cont)*0.45).toFixed(1);
+		$(prod[10]).val(sumapro);
+
+	}
+
+	var pro =$(this).closest("tr").find('input.prom');
+	var pro1 = parseFloat($(pro[0]).val());
+	var pro2 = parseFloat($(pro[1]).val());
+	var pro3 = parseFloat($(pro[2]).val());
+	var sumprom= (pro1+pro2+pro3).toFixed(1);
+	$(pro[3]).val(sumprom);
 
 });
 
