@@ -3,7 +3,7 @@
 $host ="localhost";
 $user ="root";
 $pass= "";
-$database="secundaria";
+$database="secundaria1";
 
 
 $tablaaa="alumnos";

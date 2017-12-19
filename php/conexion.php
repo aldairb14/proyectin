@@ -1,13 +1,12 @@
 <?php
 
 /**
-
 * 
 */
  $host		=	"localhost";
  $username	=	"root";
  $passUser	=	"";
-$database	=	"secundaria";
+$database	=	"secundaria1";
 $conexion1=mysqli_connect($host, $username, $passUser, $database);
 class ConectarDB{
 
@@ -15,7 +14,7 @@ class ConectarDB{
 var $host		=	"localhost";
 var $username	=	"root";
 var $passUser	=	"";
-var $database	=	"secundaria";
+var $database	=	"secundaria1";
 
 var $connection;
 

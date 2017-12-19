@@ -10,7 +10,7 @@ require("../conexion.php");
 	$pr = $_POST['privilegios'];
 
 
-	$sql="insert into usuarios (usuario,password,nombres,apellidos,estado,privilegios) values ('$u','$p','$n','$a','$e','$pr')";
+	$sql="insert into usuarios (usuario,password,nombres,apellidos,estado,privilegios) values ('$u',MD5('$p'),'$n','$a','$e','$pr')";
 
 	$resultv=mysqli_query($conexion,$sql);
  ?>

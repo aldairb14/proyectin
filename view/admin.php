@@ -68,7 +68,7 @@
       <li class="nav-item"><a class="nav-link" href="admin.php?optiona=view">ver usuarios</a></li>
   </ul>
 
-    <form class="form-inline navbar-nav ml-auto"">
+    <form class="form-inline navbar-nav ml-auto">
      
        <p class="navbar-text" style="margin-right: 10px; "><?php echo "Usuario: ".$userAccess." "; ?></p>
       <button type="submit" name="salir" class="btn btn-danger ">Salir</button>

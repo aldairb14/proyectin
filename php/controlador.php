@@ -16,16 +16,18 @@ if(!$conexion){
 }
 else{
 
-	$query = "select privilegios from usuarios where usuario='$user' and password=md5('$password')";
+	$query = "select privilegios, id_usuarios from usuarios where usuario='$user' and password=md5('$password')";
 	$consulta = mysqli_query($conexion, $query);
 	if (mysqli_num_rows($consulta)==1) {
 		$result = mysqli_fetch_array($consulta);
 		$privileges = $result[0];
 
 		//datos para almacedar en variables session para su previo uso
+		$_SESSION["id_user"]	= $result[1];
 		$_SESSION["user"]		= $user;
 		//$_SESSION["password"] 	= $password;
 		$_SESSION["privileges"]	= $privileges;
+
 
 		switch ($privileges) {
 			case '1':

@@ -69,11 +69,12 @@ else if (isset($_GET['optionc'])) {
 else if (isset($_GET['optiond'])) {
 		switch ($_GET['optiond']) {
 		case 'add_calif':
-			echo "Agregar calificaciones";
+
+			include("../view/docentes/lista_calr.php");
 			break;
 
-		case 'modify_calif':
-			echo "modificar calificaciones";
+		case 'gen_list':
+			include("../view/docentes/gen_list.php");
 			break;
 
 		case 'generate_reports':
