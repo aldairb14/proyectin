@@ -41,17 +41,19 @@ if($privilegesAccess != 1){
      $resultado=mysqli_query($conexion, $consulta);
       while ($ver=mysqli_fetch_row($resultado)) {
         # code...
-      
-            $datos= $ver[0]."||".$ver[1]."||".$ver[2]."||".$ver[3]."||".$ver[4]."||".$ver[5];
+      $count = count($ver);
+ $datos="";
+  echo " <tr>";
+
+for ($i=0; $i < $count; $i++) { 
+  $datos= $datos.$ver[$i]."||";
+  echo " <td>$ver[$i] </td>";
+}
+   
+           // $datos= $ver[0]."||".$ver[1]."||".$ver[2]."||".$ver[3]."||".$ver[4]."||".$ver[5];
          ?>
 
-        <tr>
-        <td> <?php echo $ver[0]; ?> </td>
-        <td> <?php echo $ver[1]; ?> </td>
-        <td> <?php echo $ver[2]; ?> </td>
-        <td> <?php echo $ver[3]; ?> </td>
-         <td> <?php echo $ver[4]; ?> </td>
-        <td> <?php echo $ver[5]; ?> </td>
+       
         
         <td>
           <a class="btn btn-success" data-toggle="modal" data-target="#modalEdicion" onclick="agregaform('<?php echo  $datos ?>')">
@@ -66,6 +68,7 @@ if($privilegesAccess != 1){
         <?php 
 
         }
+
          ?>
                 </tbody>
             </table>
